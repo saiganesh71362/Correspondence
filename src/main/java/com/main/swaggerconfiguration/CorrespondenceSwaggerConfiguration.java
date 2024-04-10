@@ -12,7 +12,7 @@ public class CorrespondenceSwaggerConfiguration
 	{
 	        return GroupedOpenApi.builder()
 	                .group("Correspondence")
-	                .packagesToScan("com.user.controller") // Specify the package to scan
+	                .packagesToScan("com.main.controller") // Specify the package to scan
 	                .build();
 	 }
 

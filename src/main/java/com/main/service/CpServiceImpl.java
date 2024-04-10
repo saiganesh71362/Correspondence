@@ -9,11 +9,17 @@ import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Optional;
 
-import javax.swing.text.Document;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.lowagie.text.Document;
+import com.lowagie.text.FontFactory;
+import com.lowagie.text.PageSize;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.Phrase;
+import com.lowagie.text.pdf.PdfPCell;
+import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfWriter;
 import com.main.binding.CpResponse;
 import com.main.entity.CasesEntity_Cp;
 import com.main.entity.CitizenApiEntity_Cp;
@@ -108,7 +114,7 @@ public class CpServiceImpl implements CpService {
 		PdfWriter.getInstance(document, fos);
 		
 		document.open();
-		Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
+		com.lowagie.text.Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD);  // This Line Error
 		font.setSize(18);
 		font.setColor(Color.BLUE);
 		
